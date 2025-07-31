@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy National Girlfriend Day</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+      font-family: 'Georgia', serif;
+      overflow: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Flying bat animation with wing flapping */
+    .bat {
+      position: absolute;
+      font-size: 35px;
+      color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+      pointer-events: none;
+      display: inline-block;
+    }
+
+    .bat1 {
+      animation: flyBat1 18s linear infinite, flapWings 0.3s ease-in-out infinite alternate;
+    }
+
+    .bat2 {
+      animation: flyBat2 22s linear infinite, flapWings 0.3s ease-in-out infinite alternate;
+      animation-delay: 7s, 0s;
+    }
+
+    .bat3 {
+      animation: flyBat3 16s linear infinite, flapWings 0.3s ease-in-out infinite alternate;
+      animation-delay: 12s, 0s;
+    }
+
+    .bat4 {
+      animation: flyBat4 20s linear infinite, flapWings 0.3s ease-in-out infinite alternate;
+      animation-delay: 4s, 0s;
+    }
+
+    /* Wing flapping effect */
+    @keyframes flapWings {
+      0% { transform: scaleX(1) scaleY(1); }
+      100% { transform: scaleX(0.8) scaleY(1.1); }
+    }
+
+    @keyframes flyBat1 {
+      0% { 
+        left: -60px; 
+        top: 15%; 
+        transform: rotate(0deg) scaleX(1);
+      }
+      25% { 
+        left: 30%; 
+        top: 70%; 
+        transform: rotate(20deg) scaleX(1);
+      }
+      50% { 
+        left: 80%; 
+        top: 25%; 
+        transform: rotate(-15deg) scaleX(-1);
+      }
+      75% { 
+        left: 40%; 
+        top: 80%; 
+        transform: rotate(25deg) scaleX(-1);
+      }
+      100% { 
+        left: calc(100% + 60px); 
+        top: 45%; 
+        transform: rotate(0deg) scaleX(-1);
+      }
+    }
+
+    @keyframes flyBat2 {
+      0% { 
+        left: calc(100% + 60px); 
+        top: 80%; 
+        transform: rotate(0deg) scaleX(-1);
+      }
+      25% { 
+        left: 70%; 
+        top: 20%; 
+        transform: rotate(-25deg) scaleX(-1);
+      }
+      50% { 
+        left: 20%; 
+        top: 60%; 
+        transform: rotate(18deg) scaleX(1);
+      }
+      75% { 
+        left: 60%; 
+        top: 10%; 
+        transform: rotate(-20deg) scaleX(1);
+      }
+      100% { 
+        left: -60px; 
+        top: 50%; 
+        transform: rotate(0deg) scaleX(1);
+      }
+    }
+
+    @keyframes flyBat3 {
+      0% { 
+        left: -60px; 
+        top: 60%; 
+        transform: rotate(10deg) scaleX(1);
+      }
+      30% { 
+        left: 25%; 
+        top: 30%; 
+        transform: rotate(-15deg) scaleX(1);
+      }
+      60% { 
+        left: 75%; 
+        top: 75%; 
+        transform: rotate(22deg) scaleX(-1);
+      }
+      100% { 
+        left: calc(100% + 60px); 
+        top: 20%; 
+        transform: rotate(-10deg) scaleX(-1);
+      }
+    }
+
+    @keyframes flyBat4 {
+      0% { 
+        left: calc(100% + 60px); 
+        top: 40%; 
+        transform: rotate(-5deg) scaleX(-1);
+      }
+      40% { 
+        left: 50%; 
+        top: 85%; 
+        transform: rotate(30deg) scaleX(-1);
+      }
+      70% { 
+        left: 15%; 
+        top: 15%; 
+        transform: rotate(-20deg) scaleX(1);
+      }
+      100% { 
+        left: -60px; 
+        top: 65%; 
+        transform: rotate(8deg) scaleX(1);
+      }
+    }
+
+    /* Floating hearts decoration with enhanced animations */
+    .heart {
+      position: absolute;
+      color: rgba(255, 182, 193, 0.7);
+      font-size: 20px;
+      animation: float 6s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .heart:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+    .heart:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 2s; }
+    .heart:nth-child(4) { bottom: 15%; right: 10%; animation-delay: 3s; }
+    .heart:nth-child(5) { top: 60%; left: 5%; animation-delay: 4s; }
+    .heart:nth-child(6) { top: 70%; right: 5%; animation-delay: 5s; }
+
+    @keyframes float {
+      0%, 100% { 
+        transform: translateY(0px) rotate(0deg) scale(1); 
+        opacity: 0.7;
+      }
+      50% { 
+        transform: translateY(-30px) rotate(10deg) scale(1.2); 
+        opacity: 1;
+      }
+    }
+
+    /* Floating particles */
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: radial-gradient(circle, #ff69b4, transparent);
+      border-radius: 50%;
+      animation: floatParticles 8s linear infinite;
+      pointer-events: none;
+    }
+
+    .particle:nth-child(odd) {
+      animation-duration: 10s;
+    }
+
+    @keyframes floatParticles {
+      0% {
+        transform: translateY(100vh) translateX(0px) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) translateX(100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Pulsing glow effect for envelope */
+    .envelope-container::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      background: radial-gradient(circle, rgba(255, 105, 180, 0.3), transparent 70%);
+      border-radius: 15px;
+      animation: glow 3s ease-in-out infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes glow {
+      0% { opacity: 0.5; transform: scale(1); }
+      100% { opacity: 0.8; transform: scale(1.05); }
+    }
+
+    .envelope-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      height: 250px;
+      perspective: 1000px;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+    }
+
+    .envelope {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s ease;
+      cursor: pointer;
+    }
+
+    .flap, .body {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border: 3px solid #d63384;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(214, 51, 132, 0.2);
+    }
+
+    .flap {
+      background: linear-gradient(145deg, #ff69b4, #ff1493);
+      z-index: 2;
+      transform-origin: top;
+      transform: rotateX(0deg);
+      transition: transform 1.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    .flap::before {
+      content: '💝';
+      font-size: 2.5em;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      animation: heartPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% { transform: rotateX(0deg) scale(1); }
+      50% { transform: rotateX(0deg) scale(1.02); }
+    }
+
+    @keyframes heartPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .envelope.open .flap {
+      transform: rotateX(-180deg);
+    }
+
+    .body {
+      background: linear-gradient(145deg, #ffffff, #faf0e6);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .envelope-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #ff69b4;
+      object-fit: cover;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      background: url('us.jpg') center/cover;
+      animation: photoAppear 1s ease-in-out;
+    }
+
+    @keyframes photoAppear {
+      0% { 
+        opacity: 0; 
+        transform: scale(0.8) rotate(-10deg);
+      }
+      100% { 
+        opacity: 1; 
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    .envelope-text {
+      text-align: center;
+      color: #d63384;
+      font-weight: bold;
+      font-size: 1.3em;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      animation: textShimmer 3s ease-in-out infinite;
+      margin-top: 40px;
+    }
+
+    @keyframes textShimmer {
+      0%, 100% { 
+        color: #d63384; 
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      }
+      50% { 
+        color: #ff1493; 
+        text-shadow: 0 1px 4px rgba(255, 20, 147, 0.3);
+      }
+    }
+
+    .open-btn {
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 30px;
+      background: linear-gradient(145deg, #ff1493, #d63384);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1em;
+      font-family: 'Georgia', serif;
+      cursor: pointer;
+      z-index: 3;
+      box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+      transition: all 0.3s ease;
+      animation: buttonPulse 2s ease-in-out infinite;
+    }
+
+    .open-btn:hover {
+      transform: translateX(-50%) translateY(-5px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(214, 51, 132, 0.5);
+      animation-play-state: paused;
+    }
+
+    @keyframes buttonPulse {
+      0%, 100% { 
+        box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+        transform: translateX(-50%) scale(1);
+      }
+      50% { 
+        box-shadow: 0 6px 20px rgba(214, 51, 132, 0.5);
+        transform: translateX(-50%) scale(1.02);
+      }
+    }
+
+    .message {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(145deg, #ffffff, #fff5f8);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 85%;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      z-index: 10;
+      border: 2px solid #ff69b4;
+    }
+
+    /* Custom scrollbar for the message */
+    .message::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .message::-webkit-scrollbar-track {
+      background: rgba(255, 105, 180, 0.1);
+      border-radius: 10px;
+    }
+
+    .message::-webkit-scrollbar-thumb {
+      background: linear-gradient(145deg, #ff69b4, #ff1493);
+      border-radius: 10px;
+    }
+
+    .message::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(145deg, #ff1493, #d63384);
+    }
+
+    .message.show {
+      display: block;
+      animation: messageAppear 1.5s ease forwards;
+    }
+
+    .message h1 {
+      color: #d63384;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .message p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      color: #555;
+      margin: 0;
+      font-style: italic;
+      padding-bottom: 20px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5em;
+      color: #d63384;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .close-btn:hover {
+      background: rgba(214, 51, 132, 0.1);
+    }
+
+    @keyframes messageAppear {
+      0% { 
+        opacity: 0; 
+        transform: translate(-50%, -50%) scale(0.8);
+      }
+      100% { 
+        opacity: 1; 
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    /* Sparkle effect */
+    .sparkle {
+      position: absolute;
+      color: #ffd700;
+      font-size: 12px;
+      animation: sparkle 3s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- YouTube background music -->
+  <iframe width="0" height="0" 
+          src="https://www.youtube.com/embed/XfMBdq5iFnw?autoplay=1&loop=1&playlist=XfMBdq5iFnw&controls=0&mute=0&start=0" 
+          title="Background Piano Music" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin"
+          style="position: absolute; top: -1000px; left: -1000px; opacity: 0; pointer-events: none;">
+  </iframe>
+
+  <!-- Flying bats animation -->
+  <div class="bat bat1">🦇</div>
+  <div class="bat bat2">🦇</div>
+  <div class="bat bat3">🦇</div>
+  <div class="bat bat4">🦇</div>
+
+  <!-- Floating particles -->
+  <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+  <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+  <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
+  <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+  <div class="particle" style="left: 70%; animation-delay: 6s;"></div>
+  <div class="particle" style="left: 80%; animation-delay: 7s;"></div>
+  <div class="particle" style="left: 90%; animation-delay: 8s;"></div>
+
+  <!-- Floating hearts decoration -->
+  <div class="heart">💖</div>
+  <div class="heart">💕</div>
+  <div class="heart">💝</div>
+  <div class="heart">💗</div>
+  <div class="heart">💖</div>
+  <div class="heart">💕</div>
+
+  <div class="envelope-container">
+    <div class="envelope" id="envelope">
+      <div class="flap"></div>
+      <div class="body">
+        <div class="envelope-text">With Love 💝</div>
+      </div>
+      <button class="open-btn" onclick="openEnvelope()">Open My Heart 💕</button>
+    </div>
+  </div>
+
+  <div class="message" id="message">
+    <button class="close-btn" onclick="closeMessage()">&times;</button>
+    <div class="envelope-photo" style="margin: 0 auto 25px auto;"></div>
+    <h1>Happy National Girlfriend Day! 💖</h1>
+    <p>My dearest Nurafrina Batrisyia,<br><br>
+    
+    Words cannot express how grateful I am to have you in my life. You are not just my girlfriend – you are my everything, my soul mate, my best friend, and the love of my life. Every single day with you feels like a beautiful dream that I never want to wake up from.<br><br>
+    
+    You are always there when I need you most. In my darkest moments, you are the light that guides me home. When I'm lost, you help me find my way. When I'm broken, you heal me with your love. Your unwavering support and endless compassion have made me a better person, and I am eternally grateful for your presence in my life.<br><br>
+    
+    You are my sunshine on cloudy days, my laughter when tears want to fall, and my strength when I feel weak. Your beautiful smile can brighten even my worst days, and your gentle touch can calm any storm in my heart. You believe in me even when I don't believe in myself, and you love me with a pure, unconditional love that I treasure more than anything in this world.<br><br>
+    
+    Nurafrina Batrisyia, you are my forever and always. You are the reason I wake up with a smile, the reason I have hope for tomorrow, and the reason I believe in true love. Thank you for being you – extraordinary, beautiful, kind, and perfect in every way.<br><br>
+    
+    Happy National Girlfriend Day, my darling. I love you more than all the stars in the sky and deeper than the ocean. You are my everything. 💕✨<br><br>
+    
+    Forever yours,<br>
+    With all my love 💖</p>
+  </div>
+
+  <script>
+    function openEnvelope() {
+      document.getElementById('envelope').classList.add('open');
+      setTimeout(() => {
+        document.getElementById('message').classList.add('show');
+        createSparkles();
+      }, 1200);
+    }
+
+    function closeMessage() {
+      document.getElementById('message').classList.remove('show');
+      document.getElementById('envelope').classList.remove('open');
+    }
+
+    function createSparkles() {
+      for (let i = 0; i < 10; i++) {
+        setTimeout(() => {
+          const sparkle = document.createElement('div');
+          sparkle.className = 'sparkle';
+          sparkle.innerHTML = '✨';
+          sparkle.style.left = Math.random() * 100 + '%';
+          sparkle.style.top = Math.random() * 100 + '%';
+          document.body.appendChild(sparkle);
+          
+          setTimeout(() => {
+            sparkle.remove();
+          }, 3000);
+        }, i * 200);
+      }
+    }
+  </script>
+</body>
+</html>
